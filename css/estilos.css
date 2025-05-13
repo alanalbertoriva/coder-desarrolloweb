@@ -1,0 +1,233 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    display: grid;
+    grid-template-areas: "header" "main" "footer";
+}
+
+.header {
+    background-color: #7D0A0A;
+    color: #EAD196; 
+    font-family: "Poiret One", sans-serif;
+    grid-area: header;
+    display: grid;
+    grid-template-areas: "menu-ppal titulo-ppal titulo-ppal titulo-ppal"; 
+    justify-content: start;
+    padding: 0.5em 0em;
+}
+
+.header__logo {
+    display: none;
+}
+
+.header__title {
+    grid-area: titulo-ppal;
+    font-weight: bold;
+    font-size: 2.2em;
+    padding-top: 0.2em;
+}
+
+.header__descripcion {
+    display: none;
+}
+
+.header__navigation {
+    grid-area: menu-ppal;
+    width: 120px;
+    padding: 0.5em 0px 0px 0px !important;
+}
+
+.header__navigation__btn {
+    margin-left: 0.3em;
+}
+
+.header__navigation__btn__icon {
+    font-size: 2em;
+    color: #EAD196;
+}
+
+.header__navigation__list {
+    text-align: center;
+    width: 100vw;
+}
+
+.header__navigation__list__link {
+    color: #EAD196;
+    text-transform: uppercase;
+    font-size: 1.4em;
+}
+
+.main_home, .main_nosotros {
+    background-color: #EAD196;
+    grid-area: main;
+}
+
+.main_home__contenido {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main_home__contenido__titulo {
+    color: #7D0A0A;
+    font-family: "Poiret One", sans-serif;
+    font-size: 1.6em;
+    font-weight: bold;
+    padding: 1em 0em;
+}
+
+.main_home__contenido__descripcion {
+    font-family: "Quicksand", sans-serif;
+    font-size: 1.2em;
+    text-align: center;
+    padding: 2em;
+    width: 75vw;
+}
+
+.main_home__contenido__imagen {
+    width: 60vw;
+}
+
+.footer {
+    background-color: #EEEEEE;
+    grid-area: footer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer__navigation {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0.8em 0em;
+}
+
+.footer__navigation__link {
+    color: #7D0A0A;
+    text-decoration: none;
+    font-size: 1.5em;
+    margin: 0em 1em;
+}
+
+/* Media query para tabletas */
+@media (min-width: 600px) {
+    .header__navigation__btn__icon {
+        font-size: 2.2em;
+    }
+    .header__navigation__list__link {
+        font-size: 1.6em;
+    }
+
+    .header__title {
+        font-size: 2.5em;
+    }
+
+    .main_home__contenido__titulo {
+        font-size: 1.8em;
+    }
+
+    .main_home__contenido__descripcion {
+        font-size: 1.2em;
+    }
+
+    .footer__navigation__link {
+        font-size: 2em;
+        margin: 0em 1em;
+    }
+}
+
+/* Media query para computadoras de escritorio */
+@media (min-width: 1024px) {
+    .header {
+        display: grid;
+        grid-template-areas: "logo titulo-ppal titulo-ppal ." 
+        "logo descripcion descripcion descripcion"
+        "menu-ppal menu-ppal menu-ppal menu-ppal";
+        justify-content: start;
+        padding: 0;
+        padding-top: 1.5em;
+    }
+
+    .header__logo {
+        display: inline;
+        grid-area: logo;
+        border-radius: 3em;
+        border: 1px solid black;
+        width: 20vw;
+        margin-left: 30px;
+    }
+
+    .header__title {
+        font-size: 3em;
+        margin-left: 30px;
+    }
+    
+    .header__descripcion {
+        display: inline;
+        grid-area: descripcion;
+        font-size: 2.2em;
+        margin-left: 30px;
+    }
+
+    .header__navigation__list{
+        justify-content: space-evenly;
+        background-color: black;
+    }
+    
+    .header__navigation__list__link {
+        font-size: 1.6em;
+    }
+
+    .main_home__contenido {
+        display: grid;
+        grid-template-areas: "main_home_contenido_titulo main_home_contenido_titulo main_home_contenido_titulo main_home_contenido_titulo main_home_contenido_titulo main_home_contenido_titulo"
+        "main_home_contenido_imagen main_home_contenido_imagen main_home_contenido_descripcion main_home_contenido_descripcion main_home_contenido_descripcion main_home_contenido_descripcion"
+        "main_home_contenido_imagen main_home_contenido_imagen main_home_contenido_descripcion main_home_contenido_descripcion main_home_contenido_descripcion main_home_contenido_descripcion"
+        ;
+        padding: 30px;
+    }
+
+    .main_home__contenido__titulo {
+        grid-area: main_home_contenido_titulo;
+        font-size: 2.5em;
+        margin-left: 30px;
+        padding: 0;
+    }
+
+    .main_home__contenido__descripcion {
+        grid-area: main_home_contenido_descripcion;
+        font-size: 1.8em;
+        width: auto;
+    }
+
+    .main_home__contenido__imagen {
+        grid-area: main_home_contenido_imagen;
+        width: 30vw;
+        margin-left: 30px;
+    }
+
+    .footer__navigation__link {
+        font-size: 3em;
+    }
+
+}
+
+/* .maps-ubicacion {
+    width: 400px;
+    height: 150px;
+    padding: 20px 0px;
+} */
+
+/* .lista-nosotros-contenedor {
+    padding-left: 40px;
+}
+
+.lista-nosotros {
+    list-style: disc;
+    font-size: 1.2em;
+    font-family: "Quicksand", sans-serif;
+} */
