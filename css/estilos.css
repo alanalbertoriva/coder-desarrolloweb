@@ -60,6 +60,10 @@ body {
     font-size: 1.4em;
 }
 
+.header__banner {
+    display: none;
+}
+
 .main_home, .main_nosotros {
     background-color: #EAD196;
     grid-area: main;
@@ -144,20 +148,22 @@ body {
 @media (min-width: 1024px) {
     .header {
         display: grid;
-        grid-template-areas: "logo titulo-ppal titulo-ppal ." 
-        "logo descripcion descripcion descripcion"
-        "menu-ppal menu-ppal menu-ppal menu-ppal";
+        grid-template-areas: "logo titulo-ppal titulo-ppal . ." 
+        "logo descripcion descripcion descripcion ."
+        "menu-ppal menu-ppal menu-ppal menu-ppal menu-ppal"
+        "banner banner banner banner banner";
         justify-content: start;
         padding: 0;
         padding-top: 1.5em;
+        overflow: hidden;
     }
 
     .header__logo {
         display: inline;
         grid-area: logo;
-        border-radius: 3em;
+        border-radius: 2.5em;
         border: 1px solid black;
-        width: 20vw;
+        width: 10vw;
         margin-left: 30px;
     }
 
@@ -169,17 +175,30 @@ body {
     .header__descripcion {
         display: inline;
         grid-area: descripcion;
-        font-size: 2.2em;
+        font-size: 1.8em;
         margin-left: 30px;
     }
 
     .header__navigation__list{
         justify-content: space-evenly;
-        background-color: black;
+        background-color: rgb(34, 34, 34);
     }
     
     .header__navigation__list__link {
         font-size: 1.6em;
+    }
+
+    .header__navigation__list__link:hover {
+        color: #EAD196;
+    }
+
+    .header__banner {
+        grid-area: banner;
+        display: block;
+    }
+
+    .header__banner_img {
+        width: 100vw;
     }
 
     .main_home__contenido {
@@ -188,32 +207,39 @@ body {
         "main_home_contenido_imagen main_home_contenido_imagen main_home_contenido_descripcion main_home_contenido_descripcion main_home_contenido_descripcion main_home_contenido_descripcion"
         "main_home_contenido_imagen main_home_contenido_imagen main_home_contenido_descripcion main_home_contenido_descripcion main_home_contenido_descripcion main_home_contenido_descripcion"
         ;
-        padding: 30px;
+        padding: 30px 0px;
     }
 
     .main_home__contenido__titulo {
         grid-area: main_home_contenido_titulo;
-        font-size: 2.5em;
+        text-transform: uppercase;
+        /* text-decoration: underline; */
+        font-size: 2em;
         margin-left: 30px;
+        margin-bottom: 1em;
         padding: 0;
     }
 
     .main_home__contenido__descripcion {
         grid-area: main_home_contenido_descripcion;
-        font-size: 1.8em;
+        font-size: 1.6em;
         width: auto;
+        padding: 0em 2em;
     }
 
     .main_home__contenido__imagen {
         grid-area: main_home_contenido_imagen;
-        width: 30vw;
+        width: 40vw;
         margin-left: 30px;
     }
 
     .footer__navigation__link {
-        font-size: 3em;
+        font-size: 2em;
     }
 
+    .footer__navigation__link:hover {
+        color: #7D0A0A;
+    }
 }
 
 /* .maps-ubicacion {
