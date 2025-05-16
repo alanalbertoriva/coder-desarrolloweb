@@ -14,9 +14,9 @@ body {
     font-family: "Poiret One", sans-serif;
     grid-area: header;
     display: grid;
-    grid-template-areas: "menu-ppal titulo-ppal titulo-ppal titulo-ppal"; 
-    justify-content: start;
-    padding: 0.5em 0em;
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas: "menu-ppal titulo-ppal" "banner banner";
+    justify-items: start;
 }
 
 .header__logo {
@@ -35,7 +35,7 @@ body {
 }
 
 .header__navigation {
-    grid-area: menu-ppal;
+    grid-column: 1 / 2;
     width: 120px;
     padding: 0.5em 0px 0px 0px !important;
 }
@@ -61,37 +61,47 @@ body {
 }
 
 .header__banner {
-    display: none;
+    margin-top: 0.5em;
+    grid-area: banner;
 }
 
+.header__banner_img {
+    width: 100vw;
+}
 .main_home, .main_nosotros {
     background-color: #EAD196;
     grid-area: main;
 }
 
-.main_home__contenido {
+.main_home__contenido, .main_home__contenido_secundario {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.main_home__contenido__titulo {
+.main_home__contenido_secundario {
+    background-color: white;
+}
+
+.main_home__contenido__titulo, .main_home__contenido_secundario__titulo {
     color: #7D0A0A;
     font-family: "Poiret One", sans-serif;
     font-size: 1.6em;
     font-weight: bold;
     padding: 1em 0em;
+    text-align: center;
+    max-width: 90vw;
 }
 
-.main_home__contenido__descripcion {
+.main_home__contenido__descripcion, .main_home__contenido_secundario__descripcion  {
     font-family: "Quicksand", sans-serif;
     font-size: 1.2em;
     text-align: center;
-    padding: 2em;
-    width: 75vw;
+    padding: 1em;
+    width: 80vw;
 }
 
-.main_home__contenido__imagen {
+.main_home__contenido__imagen, .main_home__contenido_secundario__imagen {
     width: 60vw;
 }
 
@@ -99,6 +109,7 @@ body {
     background-color: #EEEEEE;
     grid-area: footer;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -117,6 +128,11 @@ body {
     margin: 0em 1em;
 }
 
+.footer__copy {
+    font-family: "Quicksand", sans-serif;
+    font-size: 1em;
+}
+
 /* Media query para tabletas */
 @media (min-width: 600px) {
     .header__navigation__btn__icon {
@@ -130,11 +146,11 @@ body {
         font-size: 2.5em;
     }
 
-    .main_home__contenido__titulo {
+    .main_home__contenido__titulo, .main_home__contenido_secundario__titulo {
         font-size: 1.8em;
     }
 
-    .main_home__contenido__descripcion {
+    .main_home__contenido__descripcion, .main_home__contenido_secundario__descripcion {
         font-size: 1.2em;
     }
 
@@ -203,7 +219,7 @@ body {
 
     .main_home__contenido {
         display: grid;
-        grid-template-areas: "main_home_contenido_titulo main_home_contenido_titulo main_home_contenido_titulo main_home_contenido_titulo main_home_contenido_titulo main_home_contenido_titulo"
+        grid-template-areas: ". . main_home_contenido_titulo main_home_contenido_titulo main_home_contenido_titulo main_home_contenido_titulo"
         "main_home_contenido_imagen main_home_contenido_imagen main_home_contenido_descripcion main_home_contenido_descripcion main_home_contenido_descripcion main_home_contenido_descripcion"
         "main_home_contenido_imagen main_home_contenido_imagen main_home_contenido_descripcion main_home_contenido_descripcion main_home_contenido_descripcion main_home_contenido_descripcion"
         ;
@@ -213,9 +229,7 @@ body {
     .main_home__contenido__titulo {
         grid-area: main_home_contenido_titulo;
         text-transform: uppercase;
-        /* text-decoration: underline; */
         font-size: 2em;
-        margin-left: 30px;
         margin-bottom: 1em;
         padding: 0;
     }
@@ -231,6 +245,37 @@ body {
         grid-area: main_home_contenido_imagen;
         width: 40vw;
         margin-left: 30px;
+    }
+
+    .main_home__contenido_secundario {
+        display: grid;
+        grid-template-areas: "main_home_contenido_secundario_titulo main_home_contenido_secundario_titulo main_home_contenido_secundario_titulo main_home_contenido_secundario_titulo . ."
+        "main_home_contenido_secundario_descripcion main_home_contenido_secundario_descripcion main_home_contenido_secundario_descripcion main_home_contenido_secundario_descripcion main_home_contenido_secundario_imagen main_home_contenido_secundario_imagen"
+        "main_home_contenido_secundario_descripcion main_home_contenido_secundario_descripcion main_home_contenido_secundario_descripcion main_home_contenido_secundario_descripcion main_home_contenido_secundario_imagen main_home_contenido_secundario_imagen"
+        ;
+        padding: 30px 0px;
+        background-color: white;
+    }
+
+    .main_home__contenido_secundario__titulo {
+        grid-area: main_home_contenido_secundario_titulo;
+        text-transform: uppercase;
+        font-size: 2em;
+        margin-bottom: 1em;
+        padding: 0;
+    }
+
+    .main_home__contenido_secundario__descripcion {
+        grid-area: main_home_contenido_secundario_descripcion;
+        font-size: 1.6em;
+        width: auto;
+        padding: 0em 2em;
+    }
+
+    .main_home__contenido_secundario__imagen {
+        grid-area: main_home_contenido_secundario_imagen;
+        width: 40vw;
+        margin-right: 30px;
     }
 
     .footer__navigation__link {
