@@ -35,7 +35,7 @@ body {
 }
 
 .header__navigation {
-    grid-column: 1 / 2;
+    grid-area: menu-ppal;
     width: 120px;
     padding: 0.5em 0px 0px 0px !important;
 }
@@ -164,6 +164,7 @@ body {
 @media (min-width: 1024px) {
     .header {
         display: grid;
+        grid-template-columns: 1fr 7fr;
         grid-template-areas: "logo titulo-ppal titulo-ppal . ." 
         "logo descripcion descripcion descripcion ."
         "menu-ppal menu-ppal menu-ppal menu-ppal menu-ppal"
@@ -210,11 +211,15 @@ body {
 
     .header__banner {
         grid-area: banner;
-        display: block;
+        margin: 0;
     }
 
     .header__banner_img {
         width: 100vw;
+    }
+
+    .main_home {
+        background-color: #ead1967a;
     }
 
     .main_home__contenido {
