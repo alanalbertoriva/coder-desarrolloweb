@@ -60,6 +60,10 @@ body {
     font-size: 1.4em;
 }
 
+.header__navigation__list__link:hover {
+    color: #EAD196;
+}
+
 .header__banner {
     margin-top: 0.5em;
     grid-area: banner;
@@ -152,6 +156,15 @@ body {
     list-style: none;
 }
 
+.main_contacto__titulo {
+    color: #7D0A0A;
+    font-family: "Poiret One", sans-serif;
+    font-size: 1.6em;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 1em;
+}
+
 .footer {
     background-color: #EEEEEE;
     grid-area: footer;
@@ -175,9 +188,17 @@ body {
     margin: 0em 1em;
 }
 
+.footer__navigation__link:hover {
+    color: #7D0A0A;
+}
+
 .footer__copy {
     font-family: "Quicksand", sans-serif;
     font-size: 1em;
+}
+
+.font-primary {
+    font-family: "Quicksand", sans-serif;
 }
 
 /* Media query para tabletas */
@@ -193,7 +214,7 @@ body {
         font-size: 2.5em;
     }
 
-    .main_home__contenido__titulo, .main_home__contenido_secundario__titulo, .main_nosotros__titulo {
+    .main_home__contenido__titulo, .main_home__contenido_secundario__titulo, .main_nosotros__titulo, .main_contacto__titulo {
         font-size: 1.8em;
     }
 
@@ -254,10 +275,6 @@ body {
     
     .header__navigation__list__link {
         font-size: 1.6em;
-    }
-
-    .header__navigation__list__link:hover {
-        color: #EAD196;
     }
 
     .header__banner {
@@ -380,11 +397,11 @@ body {
         font-size: 1.2em;
     }
 
-    .footer__navigation__link {
+    .main_contacto__titulo {
+        text-transform: uppercase;
         font-size: 2em;
     }
-
-    .footer__navigation__link:hover {
-        color: #7D0A0A;
+    .footer__navigation__link {
+        font-size: 2em;
     }
 }
