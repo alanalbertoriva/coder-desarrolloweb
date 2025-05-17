@@ -72,7 +72,7 @@ body {
 .header__banner_img {
     width: 100vw;
 }
-.main_home, .main_nosotros {
+.main_home {
     background-color: #ead1967a;
     grid-area: main;
 }
@@ -110,6 +110,7 @@ body {
 }
 
 .main_nosotros {
+    grid-area: main;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -156,6 +157,10 @@ body {
     list-style: none;
 }
 
+.main_contacto {
+    grid-area: main;
+}
+
 .main_contacto__titulo {
     color: #7D0A0A;
     font-family: "Poiret One", sans-serif;
@@ -163,6 +168,12 @@ body {
     font-weight: bold;
     text-align: center;
     margin-top: 1em;
+}
+
+.main_contacto__contactos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .footer {
@@ -401,6 +412,13 @@ body {
         text-transform: uppercase;
         font-size: 2em;
     }
+
+    .main_contacto__contactos {
+        display: grid;
+        grid-template-columns: 2fr 2fr 2fr;
+        justify-items: center;
+    }
+
     .footer__navigation__link {
         font-size: 2em;
     }
