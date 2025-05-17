@@ -69,7 +69,7 @@ body {
     width: 100vw;
 }
 .main_home, .main_nosotros {
-    background-color: #EAD196;
+    background-color: #ead1967a;
     grid-area: main;
 }
 
@@ -83,14 +83,14 @@ body {
     background-color: white;
 }
 
-.main_home__contenido__titulo, .main_home__contenido_secundario__titulo {
+.main_home__contenido__titulo, .main_home__contenido_secundario__titulo, .main_nosotros__titulo {
     color: #7D0A0A;
     font-family: "Poiret One", sans-serif;
     font-size: 1.6em;
     font-weight: bold;
     padding: 1em 0em;
     text-align: center;
-    max-width: 90vw;
+    width: 90vw;
 }
 
 .main_home__contenido__descripcion, .main_home__contenido_secundario__descripcion  {
@@ -103,6 +103,53 @@ body {
 
 .main_home__contenido__imagen, .main_home__contenido_secundario__imagen {
     width: 60vw;
+}
+
+.main_nosotros {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main_nosotros__presentacion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main_nosotros__presentacion__img {
+    width: 60vw;
+}
+
+.main_nosotros__presentacion__descripcion {
+    font-family: "Quicksand", sans-serif;
+    font-size: 1.2em;
+    text-align: center;
+    padding: 1em;
+    width: 80vw;
+}
+
+.main_nosotros__ubicacion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.main_nosotros__ubicacion__mapa {
+    width: 60vw;
+    margin-bottom: 2em;
+}
+
+.main_nosotros__ubicacion__direccion, .main_nosotros__ubicacion__transporte {
+    font-family: "Quicksand", sans-serif;
+    font-size: 1.2em;
+    text-align: center;
+    width: 80vw;
+}
+
+.main_nosotros__ubicacion__transporte {
+    list-style: none;
 }
 
 .footer {
@@ -146,12 +193,16 @@ body {
         font-size: 2.5em;
     }
 
-    .main_home__contenido__titulo, .main_home__contenido_secundario__titulo {
+    .main_home__contenido__titulo, .main_home__contenido_secundario__titulo, .main_nosotros__titulo {
         font-size: 1.8em;
     }
 
-    .main_home__contenido__descripcion, .main_home__contenido_secundario__descripcion {
+    .main_home__contenido__descripcion, .main_home__contenido_secundario__descripcion, .main_nosotros__presentacion__descripcion, .main_nosotros__ubicacion__direccion {
         font-size: 1.2em;
+    }
+
+    .main_nosotros__ubicacion__transporte__lista {
+        font-size: 1em;
     }
 
     .footer__navigation__link {
@@ -218,10 +269,6 @@ body {
         width: 100vw;
     }
 
-    .main_home {
-        background-color: #ead1967a;
-    }
-
     .main_home__contenido {
         display: grid;
         grid-template-areas: ". . main_home_contenido_titulo main_home_contenido_titulo main_home_contenido_titulo main_home_contenido_titulo"
@@ -237,6 +284,7 @@ body {
         font-size: 2em;
         margin-bottom: 1em;
         padding: 0;
+        width: auto;
     }
 
     .main_home__contenido__descripcion {
@@ -268,6 +316,7 @@ body {
         font-size: 2em;
         margin-bottom: 1em;
         padding: 0;
+        width: auto;
     }
 
     .main_home__contenido_secundario__descripcion {
@@ -283,6 +332,54 @@ body {
         margin-right: 30px;
     }
 
+    .main_nosotros__titulo {
+        text-transform: uppercase;
+        font-size: 2em;
+        margin-bottom: 1em;
+        padding: 1.5em 0em 0em 0em;
+        text-align: start;
+    }
+
+    .main_nosotros__presentacion {
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+    }
+
+    .main_nosotros__presentacion__img {
+        width: 40vw;
+    }
+
+    .main_nosotros__presentacion__descripcion{
+        width: 45vw;
+        font-size: 1.6em;
+    }
+
+    .main_nosotros__ubicacion {
+        display: grid;
+        grid-template-columns: repeat(2, 2fr);
+        margin-top: 4em;
+        margin-bottom: 2em;
+    }
+
+    .main_nosotros__ubicacion__mapa {
+        width: 40vw;
+        height: 100%;
+    }
+
+    .main_nosotros__ubicacion div {
+        width: 45vw;
+    }
+
+    .main_nosotros__ubicacion__direccion {
+        width: 45vw;
+        font-size: 1.6em;
+    }
+
+    .main_nosotros__ubicacion__transporte__lista {
+        width: 45vw;
+        font-size: 1.2em;
+    }
+
     .footer__navigation__link {
         font-size: 2em;
     }
@@ -291,19 +388,3 @@ body {
         color: #7D0A0A;
     }
 }
-
-/* .maps-ubicacion {
-    width: 400px;
-    height: 150px;
-    padding: 20px 0px;
-} */
-
-/* .lista-nosotros-contenedor {
-    padding-left: 40px;
-}
-
-.lista-nosotros {
-    list-style: disc;
-    font-size: 1.2em;
-    font-family: "Quicksand", sans-serif;
-} */
