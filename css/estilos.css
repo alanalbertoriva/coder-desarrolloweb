@@ -212,7 +212,7 @@ body {
 
 .main_vinos__descripcion {
     font-family: "Poiret One", sans-serif;
-    font-size: 1em;
+    font-size: 1.2em;
     text-align: center;
     width: 90vw;
 }
@@ -251,6 +251,15 @@ body {
 
 .font-primary {
     font-family: "Quicksand", sans-serif;
+}
+
+.color-primary, .color-primary:visited, .color-primary:active, .color-primary:focus, .color-primary:hover {
+    background-color: #7D0A0A;
+}
+
+.color-primary:visited, .color-primary:active, .color-primary:focus, .color-primary:hover {
+    border-color: #7D0A0A; 
+    box-shadow: 0 0 0 .2rem rgba(255, 0, 0, 0.5)
 }
 
 /* Media query para tabletas */
