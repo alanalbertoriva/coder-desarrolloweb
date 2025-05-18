@@ -255,6 +255,7 @@ body {
 
 .color-primary, .color-primary:visited, .color-primary:active, .color-primary:focus, .color-primary:hover {
     background-color: #7D0A0A;
+    border-color: #7D0A0A; 
 }
 
 .color-primary:visited, .color-primary:active, .color-primary:focus, .color-primary:hover {
