@@ -194,6 +194,29 @@ body {
     margin-bottom: 1em;
 }
 
+.main_vinos {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em 0em;
+}
+
+.main_vinos__titulo {
+    color: #7D0A0A;
+    font-family: "Poiret One", sans-serif;
+    font-size: 1.6em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.main_vinos__descripcion {
+    font-family: "Poiret One", sans-serif;
+    font-size: 1em;
+    text-align: center;
+    padding: 0em 2em;
+}
+
 .footer {
     background-color: #EEEEEE;
     grid-area: footer;
@@ -243,11 +266,11 @@ body {
         font-size: 2.5em;
     }
 
-    .main_home__contenido__titulo, .main_home__contenido_secundario__titulo, .main_nosotros__titulo, .main_contacto__titulo, .main_bodegas__titulo {
+    .main_home__contenido__titulo, .main_home__contenido_secundario__titulo, .main_nosotros__titulo, .main_contacto__titulo, .main_bodegas__titulo, .main_vinos__titulo {
         font-size: 1.8em;
     }
 
-    .main_home__contenido__descripcion, .main_home__contenido_secundario__descripcion, .main_nosotros__presentacion__descripcion, .main_nosotros__ubicacion__direccion {
+    .main_home__contenido__descripcion, .main_home__contenido_secundario__descripcion, .main_nosotros__presentacion__descripcion, .main_nosotros__ubicacion__direccion, .main_vinos__descripcion {
         font-size: 1.2em;
     }
 
@@ -447,6 +470,23 @@ body {
         grid-column: 1 / 4;
         text-transform: uppercase;
         font-size: 2em;
+    }
+
+    .main_vinos {
+        display: grid;
+        grid-template-columns: 2fr 2fr 2fr 2fr;
+        justify-items: center;
+    }
+
+    .main_vinos__titulo {
+        grid-column: 1 / 5;
+        text-transform: uppercase;
+        font-size: 2em;
+    }
+
+    .main_vinos__descripcion {
+        grid-column: 1 / 5;
+        font-size: 1.6em;
     }
 
     .footer__navigation__link {
