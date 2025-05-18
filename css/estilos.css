@@ -176,6 +176,24 @@ body {
     align-items: center;
 }
 
+.main_bodegas {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 2em;
+}
+
+.main_bodegas__titulo {
+    color: #7D0A0A;
+    font-family: "Poiret One", sans-serif;
+    font-size: 1.6em;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
 .footer {
     background-color: #EEEEEE;
     grid-area: footer;
@@ -225,7 +243,7 @@ body {
         font-size: 2.5em;
     }
 
-    .main_home__contenido__titulo, .main_home__contenido_secundario__titulo, .main_nosotros__titulo, .main_contacto__titulo {
+    .main_home__contenido__titulo, .main_home__contenido_secundario__titulo, .main_nosotros__titulo, .main_contacto__titulo, .main_bodegas__titulo {
         font-size: 1.8em;
     }
 
@@ -417,6 +435,18 @@ body {
         display: grid;
         grid-template-columns: 2fr 2fr 2fr;
         justify-items: center;
+    }
+
+    .main_bodegas {
+        display: grid;
+        grid-template-columns: 2fr 2fr 2fr;
+        justify-items: center;
+    }
+
+    .main_bodegas__titulo {
+        grid-column: 1 / 4;
+        text-transform: uppercase;
+        font-size: 2em;
     }
 
     .footer__navigation__link {

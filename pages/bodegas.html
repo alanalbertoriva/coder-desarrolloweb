@@ -4,80 +4,124 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VinearteWines - Bodegas</title>
-    <link rel="stylesheet" href="../css/estilos.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poiret+One&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/99ba8ca0fd.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/estilos.css">
 </head>
 <body>
-    <header>
-        <div class="container-title">
-            <img src="../img/logo.jpeg" alt="Logo de la página" class="logo">
-            <h1>VinearteWines</h1>
-            <p>Venta de vinos por mayor y por menor</p>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="vinos.html">Vinos</a></li>
-                <li><a href="bodegas.html">Bodegas</a></li>
-                <li><a href="nosotros.html">Nosotros</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
+    <header class="header">
+        <img src="../img/logo.jpeg" alt="Logo de la página" class="header__logo">
+        <h1 class="header__title">VinearteWines</h1>
+        <p class="header__descripcion">Venta de vinos por mayor y por menor</p>
+        <nav class="header__navigation navbar navbar-expand-lg">
+            <button class="navbar-toggler header__navigation__btn" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars header__navigation__btn__icon"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                <ul class="navbar-nav header__navigation__list">
+                    <li><a href="../index.html" class="header__navigation__list__link">Home</a></li>
+                    <li><a href="vinos.html" class="header__navigation__list__link">Vinos</a></li>
+                    <li><a href="bodegas.html" class="header__navigation__list__link">Bodegas</a></li>
+                    <li><a href="nosotros.html" class="header__navigation__list__link">Nosotros</a></li>
+                    <li><a href="contacto.html" class="header__navigation__list__link">Contacto</a></li>
+                </ul>
+            </div>
         </nav>
+        <section class="header__banner">
+            <img src="../img/cava.JPG" alt="" class="header__banner_img">
+        </section>
     </header>
-    <main>
-        <h2>Bodegas con las que trabajamos</h2>
+    <main class="main_bodegas">
+        <h2 class="main_bodegas__titulo">Bodegas con las que trabajamos</h2>
         <section>
-            <img src="https://placehold.co/150x150" alt="Bodega 1">
-            <h3>Bodega 1</h3>
+            <div class="card mb-3" style="width: 18rem;">
+                <img src="../img/zuccardi_768x444.jpg" class="card-img-top" alt="Call center de ventas">
+                <h3 class="card-title text-center font-primary h5">
+                    Zuccardi
+                </h3>
+            </div>
         </section>
         <section>
-            <img src="https://placehold.co/150x150" alt="Bodega 2">
-            <h3>Bodega 2</h3>
+            <div class="card mb-3" style="width: 18rem;">
+                <img src="../img/rutini-wines-logo.png" class="card-img-top" alt="Call center de ventas">
+                <h3 class="card-title text-center font-primary h5">
+                    Rutini Wines
+                </h3>
+            </div>
         </section>
         <section>
-            <img src="https://placehold.co/150x150" alt="Bodega 3">
-            <h3>Bodega 3</h3>
+            <div class="card mb-3" style="width: 18rem;">
+                <img src="../img/las_perdices_768x444.jpg" class="card-img-top" alt="Call center de ventas">
+                <h3 class="card-title text-center font-primary h5">
+                    Las perdices
+                </h3>
+            </div>
         </section>
         <section>
-            <img src="https://placehold.co/150x150" alt="Bodega 4">
-            <h3>Bodega 4</h3>
+            <div class="card mb-3" style="width: 18rem;">
+                <img src="../img/bianchi_768x444.jpg" class="card-img-top" alt="Call center de ventas">
+                <h3 class="card-title text-center font-primary h5">
+                    Bianchi
+                </h3>
+            </div>
         </section>
         <section>
-            <img src="https://placehold.co/150x150" alt="Bodega 5">
-            <h3>Bodega 5</h3>
+            <div class="card mb-3" style="width: 18rem;">
+                <img src="../img/benegas_768x444.jpg" class="card-img-top" alt="Call center de ventas">
+                <h3 class="card-title text-center font-primary h5">
+                    Cuadro Benegas
+                </h3>
+            </div>
         </section>
         <section>
-            <img src="https://placehold.co/150x150" alt="Bodega 6">
-            <h3>Bodega 6</h3>
+            <div class="card mb-3" style="width: 18rem;">
+                <img src="../img/bilbainas_768x444.jpg" class="card-img-top" alt="Call center de ventas">
+                <h3 class="card-title text-center font-primary h5">
+                    Balbainas
+                </h3>
+            </div>
         </section>
         <section>
-            <img src="https://placehold.co/150x150" alt="Bodega 7">
-            <h3>Bodega 7</h3>
+            <div class="card mb-3" style="width: 18rem;">
+                <img src="../img/chandon_768x444.jpg" class="card-img-top" alt="Call center de ventas">
+                <h3 class="card-title text-center font-primary h5">
+                    Chandon
+                </h3>
+            </div>
         </section>
         <section>
-            <img src="https://placehold.co/150x150" alt="Bodega 8">
-            <h3>Bodega 8</h3>
+            <div class="card mb-3" style="width: 18rem;">
+                <img src="../img/trapiche_768x444.jpg" class="card-img-top" alt="Call center de ventas">
+                <h3 class="card-title text-center font-primary h5">
+                    Trapiche
+                </h3>
+            </div>
         </section>
         <section>
-            <img src="https://placehold.co/150x150" alt="Bodega 9">
-            <h3>Bodega 9</h3>
-        </section>
-        <section>
-            <img src="https://placehold.co/150x150" alt="Bodega 10">
-            <h3>Bodega 10</h3>
+            <div class="card mb-3" style="width: 18rem;">
+                <img src="../img/roda_768x444.jpg" class="card-img-top" alt="Call center de ventas">
+                <h3 class="card-title text-center font-primary h5">
+                    Roda
+                </h3>
+            </div>
         </section>
     </main>
-    <footer>
+    <footer class="footer">
         <nav>
-            <ul>
-                <li><a href="https:\\facebook.com" target="_blank"><i class="fa-brands fa-square-facebook"></i></a></li>
-                <li><a href="https:\\instagram.com" target="_blank"><i class="fa-brands fa-square-instagram"></i></a></li>
-                <li><a href="https:\\whatsapp.com" target="_blank"><i class="fa-brands fa-square-whatsapp"></i></a></li>
+            <ul class="footer__navigation">
+                <li><a href="https:\\facebook.com" target="_blank" class="footer__navigation__link"><i class="fa-brands fa-square-facebook"></i></a></li>
+                <li><a href="https:\\instagram.com" target="_blank" class="footer__navigation__link"><i class="fa-brands fa-square-instagram"></i></a></li>
+                <li><a href="https:\\whatsapp.com" target="_blank" class="footer__navigation__link"><i class="fa-brands fa-square-whatsapp"></i></a></li>
             </ul>
         </nav>
+        <p class="footer__copy">&copy; 2025 VinearteWines - AAR</p>
     </footer>
+    <!--Bootstrap-->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>
