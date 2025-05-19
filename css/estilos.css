@@ -255,12 +255,15 @@ body {
 
 .color-primary, .color-primary:visited, .color-primary:active, .color-primary:focus, .color-primary:hover {
     background-color: #7D0A0A;
-    border-color: #7D0A0A; 
+    border-color: #7D0A0A;
+    transition: none !important;
+    color: white;
 }
 
 .color-primary:visited, .color-primary:active, .color-primary:focus, .color-primary:hover {
+    border: 1px solid;
     border-color: #7D0A0A; 
-    box-shadow: 0 0 0 .2rem rgba(255, 0, 0, 0.5)
+    box-shadow: 0 0 0 .2rem rgba(255, 0, 0, 0.5);
 }
 
 /* Media query para tabletas */
