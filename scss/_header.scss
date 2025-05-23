@@ -1,0 +1,116 @@
+.header {
+    background-color: $primary-color;
+    color: $secondary-color; 
+    font-family: $primary-font;
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas: "menu-ppal titulo-ppal" "banner banner";
+    justify-items: start;
+    .header__logo {
+        display: none;
+    }
+    .header__title {
+        grid-area: titulo-ppal;
+        font-weight: bold;
+        font-size: 2.2em;
+        padding-top: 0.2em;
+    }
+    .header__descripcion {
+        display: none;
+    }
+    .header__navigation {
+        grid-area: menu-ppal;
+        width: 120px;
+        padding: 0.5em 0px 0px 0px !important;
+        .header__navigation__btn {
+            margin-left: 0.3em;
+            .header__navigation__btn__icon{
+                font-size: 2em;
+                color: $secondary-color;
+            }
+        }
+        .header__navigation__list {
+            text-align: center;
+            width: 100vw;
+            .header__navigation__list__link {
+                color: $secondary-color;
+                text-transform: uppercase;
+                font-size: 1.4em;
+                &:hover {
+                    color: $secondary-color;
+                }
+            }
+        }
+    }
+    .header__banner {
+        margin-top: 0.5em;
+        grid-area: banner;
+        .header__banner_img {
+            width: 100vw;
+        }
+    }
+    @include medium-screen {
+        .header__title {
+            font-size: 2.5em;
+        }
+        .header__navigation {
+            .header__navigation__btn {
+                .header__navigation__btn__icon{
+                    font-size: 2.2em;
+                }
+            }
+            .header__navigation__list {
+                .header__navigation__list__link {
+                    font-size: 1.6em;
+                }
+            }
+        }
+    }
+    @include large-screen {
+        display: grid;
+        grid-template-columns: 1fr 7fr;
+        grid-template-areas: "logo titulo-ppal titulo-ppal . ." 
+        "logo descripcion descripcion descripcion ."
+        "menu-ppal menu-ppal menu-ppal menu-ppal menu-ppal"
+        "banner banner banner banner banner";
+        justify-content: start;
+        padding: 0;
+        padding-top: 1.5em;
+        overflow: hidden;
+        .header__logo {
+            display: inline;
+            grid-area: logo;
+            border-radius: 2.5em;
+            border: 1px solid black;
+            width: 10vw;
+            margin-left: 30px;
+        }
+        .header__title {
+            font-size: 3em;
+            margin-left: 30px;
+        }
+        .header__descripcion {
+            display: inline;
+            grid-area: descripcion;
+            font-size: 1.8em;
+            margin-left: 30px;
+        }
+        .header__navigation {
+            .header__navigation__list {
+                justify-content: space-evenly;
+                background-color: rgb(34, 34, 34);
+                .header__navigation__list__link {
+                    font-size: 1.6em;
+                }
+            }
+        }
+        .header__banner {
+            grid-area: banner;
+            margin: 0;
+            .header__banner_img {
+                width: 100vw;
+            }
+        }
+    }
+}

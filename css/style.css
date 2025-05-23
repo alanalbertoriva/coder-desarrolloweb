@@ -1,0 +1,513 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  display: grid;
+  grid-template-areas: "header" "main" "footer";
+}
+
+.font-primary {
+  font-family: "Poiret One", sans-serif;
+}
+
+.color-primary, .color-primary:visited, .color-primary:active, .color-primary:focus, .color-primary:hover {
+  background-color: #7D0A0A;
+  border-color: #7D0A0A;
+  transition: none !important;
+  color: white;
+}
+
+.color-primary:visited, .color-primary:active, .color-primary:focus, .color-primary:hover {
+  border: 1px solid;
+  border-color: #7D0A0A;
+  box-shadow: 0 0 0 0.2rem rgba(255, 0, 0, 0.5);
+}
+
+.header {
+  background-color: #7D0A0A;
+  color: #EAD196;
+  font-family: "Poiret One", sans-serif;
+  grid-area: header;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-areas: "menu-ppal titulo-ppal" "banner banner";
+  justify-items: start;
+}
+.header .header__logo {
+  display: none;
+}
+.header .header__title {
+  grid-area: titulo-ppal;
+  font-weight: bold;
+  font-size: 2.2em;
+  padding-top: 0.2em;
+}
+.header .header__descripcion {
+  display: none;
+}
+.header .header__navigation {
+  grid-area: menu-ppal;
+  width: 120px;
+  padding: 0.5em 0px 0px 0px !important;
+}
+.header .header__navigation .header__navigation__btn {
+  margin-left: 0.3em;
+}
+.header .header__navigation .header__navigation__btn .header__navigation__btn__icon {
+  font-size: 2em;
+  color: #EAD196;
+}
+.header .header__navigation .header__navigation__list {
+  text-align: center;
+  width: 100vw;
+}
+.header .header__navigation .header__navigation__list .header__navigation__list__link {
+  color: #EAD196;
+  text-transform: uppercase;
+  font-size: 1.4em;
+}
+.header .header__navigation .header__navigation__list .header__navigation__list__link:hover {
+  color: #EAD196;
+}
+.header .header__banner {
+  margin-top: 0.5em;
+  grid-area: banner;
+}
+.header .header__banner .header__banner_img {
+  width: 100vw;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .header .header__title {
+    font-size: 2.5em;
+  }
+  .header .header__navigation .header__navigation__btn .header__navigation__btn__icon {
+    font-size: 2.2em;
+  }
+  .header .header__navigation .header__navigation__list .header__navigation__list__link {
+    font-size: 1.6em;
+  }
+}
+@media (min-width: 1025px) {
+  .header {
+    display: grid;
+    grid-template-columns: 1fr 7fr;
+    grid-template-areas: "logo titulo-ppal titulo-ppal . ." "logo descripcion descripcion descripcion ." "menu-ppal menu-ppal menu-ppal menu-ppal menu-ppal" "banner banner banner banner banner";
+    justify-content: start;
+    padding: 0;
+    padding-top: 1.5em;
+    overflow: hidden;
+  }
+  .header .header__logo {
+    display: inline;
+    grid-area: logo;
+    border-radius: 2.5em;
+    border: 1px solid black;
+    width: 10vw;
+    margin-left: 30px;
+  }
+  .header .header__title {
+    font-size: 3em;
+    margin-left: 30px;
+  }
+  .header .header__descripcion {
+    display: inline;
+    grid-area: descripcion;
+    font-size: 1.8em;
+    margin-left: 30px;
+  }
+  .header .header__navigation .header__navigation__list {
+    justify-content: space-evenly;
+    background-color: rgb(34, 34, 34);
+  }
+  .header .header__navigation .header__navigation__list .header__navigation__list__link {
+    font-size: 1.6em;
+  }
+  .header .header__banner {
+    grid-area: banner;
+    margin: 0;
+  }
+  .header .header__banner .header__banner_img {
+    width: 100vw;
+  }
+}
+
+.main_home {
+  background-color: rgba(234, 209, 150, 0.4784313725);
+  grid-area: main;
+}
+.main_home .main_home__contenido {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main_home .main_home__contenido .main_home__contenido__titulo {
+  color: #7D0A0A;
+  font-family: "Poiret One", sans-serif;
+  font-size: 1.6em;
+  font-weight: bold;
+  padding: 1em 0em;
+  text-align: center;
+  width: 90vw;
+}
+.main_home .main_home__contenido .main_home__contenido__imagen {
+  width: 60vw;
+}
+.main_home .main_home__contenido .main_home__contenido__descripcion {
+  font-family: "Poiret One", sans-serif;
+  font-size: 1.2em;
+  text-align: center;
+  padding: 1em;
+  width: 80vw;
+}
+.main_home .main_home__contenido_secundario {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+}
+.main_home .main_home__contenido_secundario .main_home__contenido_secundario__titulo {
+  color: #7D0A0A;
+  font-family: "Poiret One", sans-serif;
+  font-size: 1.6em;
+  font-weight: bold;
+  padding: 1em 0em;
+  text-align: center;
+  width: 90vw;
+}
+.main_home .main_home__contenido_secundario .main_home__contenido_secundario__imagen {
+  width: 60vw;
+}
+.main_home .main_home__contenido_secundario .main_home__contenido_secundario__descripcion {
+  font-family: "Poiret One", sans-serif;
+  font-size: 1.2em;
+  text-align: center;
+  padding: 1em;
+  width: 80vw;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .main_home .main_home__contenido .main_home__contenido__titulo {
+    font-size: 1.8em;
+  }
+  .main_home .main_home__contenido .main_home__contenido__descripcion {
+    font-size: 1.2em;
+  }
+  .main_home .main_home__contenido_secundario .main_home__contenido_secundario__titulo {
+    font-size: 1.8em;
+  }
+  .main_home .main_home__contenido_secundario .main_home__contenido_secundario__descripcion {
+    font-size: 1.2em;
+  }
+}
+@media (min-width: 1025px) {
+  .main_home .main_home__contenido {
+    display: grid;
+    grid-template-areas: ". . main_home_contenido_titulo main_home_contenido_titulo main_home_contenido_titulo main_home_contenido_titulo" "main_home_contenido_imagen main_home_contenido_imagen main_home_contenido_descripcion main_home_contenido_descripcion main_home_contenido_descripcion main_home_contenido_descripcion" "main_home_contenido_imagen main_home_contenido_imagen main_home_contenido_descripcion main_home_contenido_descripcion main_home_contenido_descripcion main_home_contenido_descripcion";
+    padding: 30px 0px;
+  }
+  .main_home .main_home__contenido .main_home__contenido__titulo {
+    grid-area: main_home_contenido_titulo;
+    text-transform: uppercase;
+    font-size: 2em;
+    margin-bottom: 1em;
+    padding: 0;
+    width: auto;
+  }
+  .main_home .main_home__contenido .main_home__contenido__imagen {
+    grid-area: main_home_contenido_imagen;
+    width: 40vw;
+    margin-left: 30px;
+  }
+  .main_home .main_home__contenido .main_home__contenido__descripcion {
+    grid-area: main_home_contenido_descripcion;
+    font-size: 1.6em;
+    width: auto;
+    padding: 0em 2em;
+  }
+  .main_home .main_home__contenido_secundario {
+    display: grid;
+    grid-template-areas: "main_home_contenido_secundario_titulo main_home_contenido_secundario_titulo main_home_contenido_secundario_titulo main_home_contenido_secundario_titulo . ." "main_home_contenido_secundario_descripcion main_home_contenido_secundario_descripcion main_home_contenido_secundario_descripcion main_home_contenido_secundario_descripcion main_home_contenido_secundario_imagen main_home_contenido_secundario_imagen" "main_home_contenido_secundario_descripcion main_home_contenido_secundario_descripcion main_home_contenido_secundario_descripcion main_home_contenido_secundario_descripcion main_home_contenido_secundario_imagen main_home_contenido_secundario_imagen";
+    padding: 30px 0px;
+    background-color: white;
+  }
+  .main_home .main_home__contenido_secundario .main_home__contenido_secundario__titulo {
+    grid-area: main_home_contenido_secundario_titulo;
+    text-transform: uppercase;
+    font-size: 2em;
+    margin-bottom: 1em;
+    padding: 0;
+    width: auto;
+  }
+  .main_home .main_home__contenido_secundario .main_home__contenido_secundario__imagen {
+    grid-area: main_home_contenido_secundario_imagen;
+    width: 40vw;
+    margin-right: 30px;
+  }
+  .main_home .main_home__contenido_secundario .main_home__contenido_secundario__descripcion {
+    grid-area: main_home_contenido_secundario_descripcion;
+    font-size: 1.6em;
+    width: auto;
+    padding: 0em 2em;
+  }
+}
+
+.main_nosotros {
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main_nosotros .main_nosotros__titulo {
+  color: #7D0A0A;
+  font-family: "Poiret One", sans-serif;
+  font-size: 1.6em;
+  font-weight: bold;
+  padding: 1em 0em;
+  text-align: center;
+  width: 90vw;
+}
+.main_nosotros .main_nosotros__presentacion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main_nosotros .main_nosotros__presentacion .main_nosotros__presentacion__img {
+  width: 60vw;
+}
+.main_nosotros .main_nosotros__presentacion .main_nosotros__presentacion__descripcion {
+  font-family: "Poiret One", sans-serif;
+  font-size: 1.2em;
+  text-align: center;
+  padding: 1em;
+  width: 80vw;
+}
+.main_nosotros .main_nosotros__ubicacion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.main_nosotros .main_nosotros__ubicacion .main_nosotros__ubicacion__mapa {
+  width: 60vw;
+  margin-bottom: 2em;
+}
+.main_nosotros .main_nosotros__ubicacion .main_nosotros__ubicacion__direccion {
+  font-family: "Poiret One", sans-serif;
+  font-size: 1.2em;
+  text-align: center;
+  width: 80vw;
+}
+.main_nosotros .main_nosotros__ubicacion .main_nosotros__ubicacion__transporte {
+  font-family: "Poiret One", sans-serif;
+  font-size: 1.2em;
+  text-align: center;
+  width: 80vw;
+  list-style: none;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .main_nosotros .main_nosotros__titulo {
+    font-size: 1.8em;
+  }
+  .main_nosotros .main_nosotros__presentacion .main_nosotros__presentacion__descripcion {
+    font-size: 1.2em;
+  }
+  .main_nosotros .main_nosotros__ubicacion .main_nosotros__ubicacion__direccion {
+    font-size: 1.2em;
+  }
+  .main_nosotros .main_nosotros__ubicacion .main_nosotros__ubicacion__transporte .main_nosotros__ubicacion__transporte__lista {
+    font-size: 1em;
+  }
+}
+@media (min-width: 1025px) {
+  .main_nosotros .main_nosotros__titulo {
+    text-transform: uppercase;
+    font-size: 2em;
+    margin-bottom: 1em;
+    padding: 1.5em 0em 0em 0em;
+    text-align: start;
+  }
+  .main_nosotros .main_nosotros__presentacion {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+  }
+  .main_nosotros .main_nosotros__presentacion .main_nosotros__presentacion__img {
+    width: 40vw;
+  }
+  .main_nosotros .main_nosotros__presentacion .main_nosotros__presentacion__descripcion {
+    width: 45vw;
+    font-size: 1.6em;
+  }
+  .main_nosotros .main_nosotros__ubicacion {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    margin-top: 4em;
+    margin-bottom: 2em;
+  }
+  .main_nosotros .main_nosotros__ubicacion .main_nosotros__ubicacion__mapa {
+    width: 40vw;
+    height: 100%;
+  }
+  .main_nosotros .main_nosotros__ubicacion div {
+    width: 45vw;
+  }
+  .main_nosotros .main_nosotros__ubicacion div .main_nosotros__ubicacion__direccion {
+    width: 45vw;
+    font-size: 1.6em;
+  }
+  .main_nosotros .main_nosotros__ubicacion div .main_nosotros__ubicacion__transporte .main_nosotros__ubicacion__transporte__lista {
+    width: 45vw;
+    font-size: 1.2em;
+  }
+}
+
+.main_bodegas {
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 2em;
+}
+.main_bodegas .main_bodegas__titulo {
+  color: #7D0A0A;
+  font-family: "Poiret One", sans-serif;
+  font-size: 1.6em;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .main_bodegas .main_bodegas__titulo {
+    font-size: 1.8em;
+  }
+}
+@media (min-width: 1025px) {
+  .main_bodegas {
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
+    justify-items: center;
+  }
+  .main_bodegas .main_bodegas__titulo {
+    grid-column: 1/4;
+    text-transform: uppercase;
+    font-size: 2em;
+  }
+}
+
+.main_vinos {
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2em 0em;
+}
+.main_vinos .main_vinos__titulo {
+  color: #7D0A0A;
+  font-family: "Poiret One", sans-serif;
+  font-size: 1.6em;
+  font-weight: bold;
+  text-align: center;
+}
+.main_vinos .main_vinos__descripcion {
+  font-family: "Poiret One", sans-serif;
+  font-size: 1.2em;
+  text-align: center;
+  width: 90vw;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .main_vinos .main_vinos__titulo {
+    font-size: 1.8em;
+  }
+  .main_vinos .main_vinos__descripcion {
+    font-size: 1.2em;
+  }
+}
+@media (min-width: 1025px) {
+  .main_vinos {
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr 2fr;
+    justify-items: center;
+  }
+  .main_vinos .main_vinos__titulo {
+    grid-column: 1/5;
+    text-transform: uppercase;
+    font-size: 2em;
+  }
+  .main_vinos .main_vinos__descripcion {
+    grid-column: 1/5;
+    font-size: 1.6em;
+  }
+}
+
+.main_contacto {
+  grid-area: main;
+}
+.main_contacto .main_contacto__titulo {
+  color: #7D0A0A;
+  font-family: "Poiret One", sans-serif;
+  font-size: 1.6em;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 1em;
+}
+.main_contacto .main_contacto__contactos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .main_contacto .main_contacto__titulo {
+    font-size: 1.8em;
+  }
+}
+@media (min-width: 1025px) {
+  .main_contacto .main_contacto__titulo {
+    text-transform: uppercase;
+    font-size: 2em;
+  }
+  .main_contacto .main_contacto__contactos {
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
+    justify-items: center;
+  }
+}
+
+.footer {
+  background-color: #EEEEEE;
+  grid-area: footer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.footer .footer__navigation {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0.8em 0em;
+}
+.footer .footer__navigation .footer__navigation__link {
+  color: #7D0A0A;
+  text-decoration: none;
+  font-size: 1.5em;
+  margin: 0em 1em;
+}
+.footer .footer__navigation .footer__navigation__link:hover {
+  color: #7D0A0A;
+}
+.footer .footer__copy {
+  font-family: "Poiret One", sans-serif;
+  font-size: 1em;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .footer .footer__navigation .footer__navigation__link {
+    font-size: 2em;
+    margin: 0em 1em;
+  }
+}
+@media (min-width: 1025px) {
+  .footer .footer__navigation .footer__navigation__link {
+    font-size: 2em;
+  }
+}/*# sourceMappingURL=style.css.map */

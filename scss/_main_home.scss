@@ -1,0 +1,128 @@
+.main_home {
+    background-color: #ead1967a;
+    grid-area: main;
+    .main_home__contenido {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .main_home__contenido__titulo {
+            color: $primary-color;
+            font-family: $primary-font;
+            font-size: 1.6em;
+            font-weight: bold;
+            padding: 1em 0em;
+            text-align: center;
+            width: 90vw;
+        }
+        .main_home__contenido__imagen{
+            width: 60vw;
+        }
+        .main_home__contenido__descripcion {
+            font-family: $primary-font;
+            font-size: 1.2em;
+            text-align: center;
+            padding: 1em;
+            width: 80vw;
+        }
+    }
+    .main_home__contenido_secundario{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: white;
+        .main_home__contenido_secundario__titulo{
+            color: $primary-color;
+            font-family: $primary-font;
+            font-size: 1.6em;
+            font-weight: bold;
+            padding: 1em 0em;
+            text-align: center;
+            width: 90vw;
+        }
+        .main_home__contenido_secundario__imagen{
+            width: 60vw;
+        }
+        .main_home__contenido_secundario__descripcion{
+            font-family: $primary-font;
+            font-size: 1.2em;
+            text-align: center;
+            padding: 1em;
+            width: 80vw;
+        }
+    }
+    @include medium-screen {
+        .main_home__contenido {
+            .main_home__contenido__titulo {
+                font-size: 1.8em;
+            }
+            .main_home__contenido__descripcion {
+                font-size: 1.2em;
+            }
+        }
+        .main_home__contenido_secundario{
+            .main_home__contenido_secundario__titulo{
+                font-size: 1.8em;
+            }
+            .main_home__contenido_secundario__descripcion{
+                font-size: 1.2em;
+            }
+        }
+    }
+    @include large-screen {
+        .main_home__contenido {
+            display: grid;
+            grid-template-areas: ". . main_home_contenido_titulo main_home_contenido_titulo main_home_contenido_titulo main_home_contenido_titulo"
+            "main_home_contenido_imagen main_home_contenido_imagen main_home_contenido_descripcion main_home_contenido_descripcion main_home_contenido_descripcion main_home_contenido_descripcion"
+            "main_home_contenido_imagen main_home_contenido_imagen main_home_contenido_descripcion main_home_contenido_descripcion main_home_contenido_descripcion main_home_contenido_descripcion"
+            ;
+            padding: 30px 0px;
+            .main_home__contenido__titulo {
+                grid-area: main_home_contenido_titulo;
+                text-transform: uppercase;
+                font-size: 2em;
+                margin-bottom: 1em;
+                padding: 0;
+                width: auto;
+            }
+            .main_home__contenido__imagen{
+                grid-area: main_home_contenido_imagen;
+                width: 40vw;
+                margin-left: 30px;
+            }
+            .main_home__contenido__descripcion {
+                grid-area: main_home_contenido_descripcion;
+                font-size: 1.6em;
+                width: auto;
+                padding: 0em 2em;
+            }
+        }
+        .main_home__contenido_secundario{
+            display: grid;
+            grid-template-areas: "main_home_contenido_secundario_titulo main_home_contenido_secundario_titulo main_home_contenido_secundario_titulo main_home_contenido_secundario_titulo . ."
+            "main_home_contenido_secundario_descripcion main_home_contenido_secundario_descripcion main_home_contenido_secundario_descripcion main_home_contenido_secundario_descripcion main_home_contenido_secundario_imagen main_home_contenido_secundario_imagen"
+            "main_home_contenido_secundario_descripcion main_home_contenido_secundario_descripcion main_home_contenido_secundario_descripcion main_home_contenido_secundario_descripcion main_home_contenido_secundario_imagen main_home_contenido_secundario_imagen"
+            ;
+            padding: 30px 0px;
+            background-color: white;
+            .main_home__contenido_secundario__titulo{
+                grid-area: main_home_contenido_secundario_titulo;
+                text-transform: uppercase;
+                font-size: 2em;
+                margin-bottom: 1em;
+                padding: 0;
+                width: auto;
+            }
+            .main_home__contenido_secundario__imagen{
+                grid-area: main_home_contenido_secundario_imagen;
+                width: 40vw;
+                margin-right: 30px;
+            }
+            .main_home__contenido_secundario__descripcion{
+                grid-area: main_home_contenido_secundario_descripcion;
+                font-size: 1.6em;
+                width: auto;
+                padding: 0em 2em;
+            }
+        }
+    }
+}

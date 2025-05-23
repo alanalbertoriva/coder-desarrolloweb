@@ -1,0 +1,36 @@
+@import "variables";
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    display: grid;
+    grid-template-areas: "header" "main" "footer";
+}
+
+.font-primary {
+    font-family: $primary-font;
+}
+
+.color-primary, .color-primary:visited, .color-primary:active, .color-primary:focus, .color-primary:hover {
+    background-color: $primary-color;
+    border-color: $primary-color;
+    transition: none !important;
+    color: white;
+}
+
+.color-primary:visited, .color-primary:active, .color-primary:focus, .color-primary:hover {
+    border: 1px solid;
+    border-color: $primary-color; 
+    box-shadow: 0 0 0 .2rem rgba(255, 0, 0, 0.5);
+}
+
+@import "header";
+@import "main_home";
+@import "main_nosotros";
+@import "main_bodegas";
+@import "main_vinos";
+@import "main_contacto";
+@import "footer";
