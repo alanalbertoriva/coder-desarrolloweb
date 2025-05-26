@@ -2,6 +2,15 @@ $primary-color: #7D0A0A;
 $secondary-color: #EAD196;
 $primary-font: "Poiret One", sans-serif;
 
+@keyframes rotarY {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
 @mixin medium-screen {
     @media (min-width: 768px) and (max-width: 1024px) {
         @content;
